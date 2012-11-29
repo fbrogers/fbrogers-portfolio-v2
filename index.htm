@@ -12,9 +12,18 @@
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript">
 			$(function(){
-				$('nav > ul > li > a').click(function(){
+				$('nav > ul > li > a').click(function(event){
 					$(this).next('ul').slideToggle('fast');
-					return false;
+					event.preventDefault();
+				});
+
+				$('#change-bg').click(function(event){
+					var min = 1;
+					var max = 5;
+					$('#background, body').css({
+						'background-image': 'url(images/backgrounds/0'+(Math.floor(Math.random()*max)+min)+'.jpg)'
+					});
+					event.preventDefault();
 				});
 			});
 		</script>
@@ -89,7 +98,8 @@
 				<span>Copyright &copy; 2012 Jordan Rogers &bull;</span>
 				<span>
 					<a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a> &bull;
-					<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">Valid CSS 3</a>
+					<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">Valid CSS 3</a> &bull;
+					<a href="#" id="change-bg">Change Background</a>
 				</span>
 			</div>
 		</footer>
