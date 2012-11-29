@@ -2,7 +2,6 @@
 /* CSS Document */
 
 body{
-	position: relative;
 	background-color: #111;
 	margin: 0;
 	padding: 0;
@@ -10,11 +9,20 @@ body{
 	overflow-x: hidden;
 	font-size: 100%;
 	color: #fff;
+	height: 100%;
 }
 
 a{
 	color: #fff;
 	text-decoration: none;
+}
+
+#wrapper{
+	min-height: 100%;
+	position: relative;
+	z-index: 10;
+	width: 85%;
+	margin: auto;
 }
 
 #background{
@@ -40,10 +48,9 @@ header{
 	z-index: 10;
 	position: relative;
 	top: 3em;
-	left: 3em;
 	width: 18em;
 	background-color: transparent;
-	background-image: url('../images/opacity.png');
+	background-image: url('../images/section.png');
 	padding-bottom: 1em;
 }
 
@@ -97,7 +104,7 @@ nav li li a{
 	z-index: 10;
 	position: absolute;
 	top: 3em;
-	right: 6em;
+	right: 1em;
 	text-shadow: 0 0 5px #333;
 }
 
@@ -115,6 +122,27 @@ nav li li a{
 	bottom: 0;
 }
 
+footer{
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 85%;
+	z-index: 10;
+}
+
+#footer-content{
+	position: relative;
+	left: -50%;
+	height: 2.5em;
+	background-color: transparent;
+	background-image: url('../images/section.png');
+	font-size: 1em;
+	text-align: right;
+	padding: 1em 2em 0 0;
+	color: #ccc;
+	letter-spacing: 1px
+}
+
 /* TABLET CONTENT */
 @media (max-width: 1024px){
 
@@ -127,7 +155,7 @@ nav li li a{
 	}
 
 	#main h1{
-		font-size: 2.25em;
+		font-size: 2.75em;
 		position: relative;
 		padding-bottom: 0.2em;
 	}
@@ -141,7 +169,7 @@ nav li li a{
 }
 
 /* HANDHELD CONTENT */
-@media (max-width: 800px){
+@media (max-width: 750px){
 
 	#background{
 		display: none !important;
@@ -154,6 +182,10 @@ nav li li a{
 		background-position: 50% -50px;
 	}
 
+	#wrapper, footer{
+		width: 80%;
+	}
+
 	#main{
 		display: none;
 	}
@@ -161,8 +193,9 @@ nav li li a{
 	#tablet{
 		display: block;
 		margin: auto;
-		width: 80%;
+		width: 85%;
 		text-align: center;
+		text-shadow: 0 0 5px #333;
 	}
 
 	#tablet h1{
@@ -174,15 +207,11 @@ nav li li a{
 	}
 
 	header{
-		width: 80%;
-		position: relative;
+		width: 100%;
 		top: 0.5em;
 		left: inherit;
 		margin: auto;
-		background-color: transparent;
-		background-image: url('../images/opacity.png');
 		text-align: center;
-		min-height: 0;
 	}
 
 	header p{
@@ -197,59 +226,25 @@ nav li li a{
 		width: 50%;
 		margin: auto;
 	}
+
+	#footer-content{
+		text-align: center;
+		padding-right: 0;
+		height: 4em;
+	}
+
+	#footer-content span{
+		display: block;
+	}
 }
 
 /* REALLY SMALL CONTENT */
 @media (max-width: 480px){
-
-	#background{
-		display: none !important;
-		opacity: 0;
-	}
-
-	body{
-		background-image: url('../images/backgrounds/05.jpg');
-		background-repeat: no-repeat;
-		background-position: 50% -50px;
-	}
-
-	#main{
-		display: none;
-	}
-
-	#tablet{
-		display: block;
-		margin: auto;
-		width: 80%;
-		text-align: center;
-	}
-
 	#tablet h1{
 		font-size: 1.5em;
 	}
 
-	#tablet h1 .small{
-		font-size: 0.5em;
-	}
-
-	header{
-		width: 80%;
-		position: relative;
-		top: 0.5em;
-		left: inherit;
-		margin: auto;
-		background-color: transparent;
-		background-image: url('../images/opacity.png');
-		text-align: center;
-		min-height: 0;
-	}
-
-	nav li a, nav li li a{
-		padding-left: 0;
-	}
-
-	nav li p{
-		width: 50%;
-		margin: auto;
+	#footer-content{
+		font-size: 0.75em;
 	}
 }
