@@ -14,6 +14,7 @@
 			$(function(){
 				$('nav > ul > li > a').click(function(){
 					$(this).next('ul').slideToggle('fast');
+					return false;
 				});
 			});
 		</script>

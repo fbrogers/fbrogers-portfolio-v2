@@ -23,7 +23,7 @@ a{
 	z-index: 10;
 	width: 85%;
 	margin: auto;
-	-webkit-perspective: 1600;
+	-webkit-perspective: 2000;
 }
 
 #background{
@@ -53,9 +53,8 @@ header{
 	background-color: transparent;
 	background-image: url('../images/section.png');
 	padding-bottom: 1em;
-	-webkit-transform: rotateY(25deg);
+	-webkit-transform: rotateY(20deg);
 	-webkit-transition: -webkit-transform .4s ease;
-	min-height: 30em;
 }
 
 header:hover{
@@ -114,7 +113,7 @@ nav li li a{
 	top: 3em;
 	right: 1em;
 	text-shadow: 0 0 5px #333;
-	-webkit-transform: rotateY(-25deg);
+	-webkit-transform: rotateY(-20deg);
 	-webkit-transition: -webkit-transform .4s ease;	
 }
 
@@ -226,6 +225,7 @@ footer{
 		left: inherit;
 		margin: auto;
 		text-align: center;
+		-webkit-transform: rotateY(0deg);
 	}
 
 	header p{
@@ -270,7 +270,7 @@ footer{
 }
 
 /* DISAPPEARING FOOTER */
-@media (max-height: 600px){
+@media (max-height: 400px){
 	footer{
 		display: none;
 	}
