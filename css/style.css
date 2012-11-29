@@ -23,11 +23,12 @@ a{
 	z-index: 10;
 	width: 85%;
 	margin: auto;
+	-webkit-perspective: 1600;
 }
 
 #background{
 	background-color: #111;
-	background-image: url('../images/backgrounds/05.jpg');
+	background-image: url('../images/backgrounds/04.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 0;
@@ -52,6 +53,13 @@ header{
 	background-color: transparent;
 	background-image: url('../images/section.png');
 	padding-bottom: 1em;
+	-webkit-transform: rotateY(25deg);
+	-webkit-transition: -webkit-transform .4s ease;
+	min-height: 30em;
+}
+
+header:hover{
+	-webkit-transform: rotateY(0deg);
 }
 
 header p{
@@ -106,6 +114,12 @@ nav li li a{
 	top: 3em;
 	right: 1em;
 	text-shadow: 0 0 5px #333;
+	-webkit-transform: rotateY(-25deg);
+	-webkit-transition: -webkit-transform .4s ease;	
+}
+
+#main:hover{
+	-webkit-transform: rotateY(0deg);
 }
 
 #main h1{
@@ -177,7 +191,7 @@ footer{
 	}
 
 	body{
-		background-image: url('../images/backgrounds/05.jpg');
+		background-image: url('../images/backgrounds/04.jpg');
 		background-repeat: no-repeat;
 		background-position: 50% -50px;
 	}
@@ -227,6 +241,12 @@ footer{
 		margin: auto;
 	}
 
+	footer{
+		clear: both;
+		margin-top: 60px;
+		position: relative;
+	}
+
 	#footer-content{
 		text-align: center;
 		padding-right: 0;
@@ -246,5 +266,12 @@ footer{
 
 	#footer-content{
 		font-size: 0.75em;
+	}
+}
+
+/* DISAPPEARING FOOTER */
+@media (max-height: 600px){
+	footer{
+		display: none;
 	}
 }
