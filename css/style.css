@@ -179,6 +179,7 @@ footer{
 		background-image: url('../images/backgrounds/background.php');
 		background-repeat: no-repeat;
 		background-position: 50% -50px;
+		background-size: auto 150%;
 	}
 
 	#wrapper, footer{
