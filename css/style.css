@@ -171,12 +171,7 @@ footer{
 @media (max-width: 768px){
 
 	#background{
-		display: none !important;
-		opacity: 0;
-	}
-
-	body{
-		background-image: url('../images/backgrounds/background.php');
+		background-image: url('../images/backgrounds/1.jpg');
 		background-repeat: no-repeat;
 		background-position: 50% -50px;
 		background-size: auto 150%;

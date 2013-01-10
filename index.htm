@@ -6,27 +6,13 @@
 
 		<title>Jordan Rogers :: firstbornrogers.com</title>
 
+		<!-- css -->
 		<link rel="stylesheet" href="css/style.css" media="screen" />
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro"  />
 
+		<!-- javascript -->
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-		<script type="text/javascript">
-			$(function(){
-				$('nav > ul > li > a').click(function(event){
-					$(this).next('ul').not('.ignore').slideToggle('fast');
-					event.preventDefault();
-				});
-
-				$('#change-bg').click(function(event){
-					var min = 1;
-					var max = 5;
-					$('#background, body').css({
-						'background-image': 'url(images/backgrounds/'+(Math.floor(Math.random()*max)+min)+'.jpg)'
-					});
-					event.preventDefault();
-				});
-			});
-		</script>
+		<script type="text/javascript" src="js/global.js"></script>
 
 		<!--[if IE]>
 		<script src="http://modernizr.com/downloads/modernizr-latest.js"></script>
