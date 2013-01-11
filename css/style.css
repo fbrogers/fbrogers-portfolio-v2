@@ -95,8 +95,12 @@ nav li li a{
 	text-decoration: none;
 }
 
-.ignore{
+.ignore ul{
 	display: block;
+}
+
+.ignore a[href='#']{
+	cursor: default;
 }
 
 #main{
