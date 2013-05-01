@@ -175,10 +175,13 @@ footer{
 /* HANDHELD CONTENT */
 @media (max-width: 800px){
 
-	#background{
-		background-repeat: no-repeat;
-		background-position: 50% -50px;
+	body{
 		background-size: auto 150%;
+		background-position: 50% 0;
+	}
+
+	#background{
+		display: none;
 	}
 
 	#wrapper, footer{
