@@ -1,26 +1,32 @@
 $(function(){
+	var rand = 1;
+
+	function randoCalrissian(current){
+		var rando = Math.floor(Math.random()*10)+1;
+		if(current == rando) return randoCalrissian(current);
+		else return rando;
+	}
+
 	function changeBackground(){
 		//range and random choice
-		var rand = Math.floor(Math.random()*10)+1;
+		rand = randoCalrissian(rand);
 
 		//animate the background change by fading out the old and fading in the new
 		$('#background').animate({ opacity: 0 }, 'fast', function(){
 			$(this).css({
 				'background-image': 'url(images/backgrounds/' + rand + '.jpg)'
 			}).animate({ opacity: 1 });
-		});
-		
+		});		
 		$('body').css('background-image', 'url(images/backgrounds/' + rand + '.jpg)');
 	}
 
 	$('nav > ul > li[class!="ignore"] > a').click(function(event){
 		$(this).next('ul:first').slideToggle('fast');
-		changeBackground();
 		event.preventDefault();
 	});
 
 	$('#change-bg').click(function(event){
-		changeBackground();
+		changeBackground(rand);
 		event.preventDefault();
 	});
 
