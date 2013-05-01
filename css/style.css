@@ -23,7 +23,6 @@ a{
 	z-index: 10;
 	width: 85%;
 	margin: auto;
-	-webkit-perspective: 2000;
 }
 
 #background{
@@ -50,8 +49,6 @@ header{
 	position: relative;
 	top: 3em;
 	width: 18em;
-	background-color: transparent;
-	background-image: url('../images/section.png');
 	padding-bottom: 1em;
 }
 
@@ -103,12 +100,17 @@ nav li li a{
 	cursor: default;
 }
 
+.semi{
+	background-image: url('../images/section.png');
+	background-color: transparent;
+}
+
 #main{
 	z-index: 10;
 	position: absolute;
 	top: 3em;
 	right: 1em;
-	text-shadow: 0 0 5px #333;
+	padding: 0.5em 2em 1em 2em;
 }
 
 #main h1{
@@ -137,8 +139,6 @@ footer{
 	position: relative;
 	left: -50%;
 	height: 2.5em;
-	background-color: transparent;
-	background-image: url('../images/section.png');
 	font-size: 1em;
 	text-align: right;
 	padding: 1em 2em 0 0;
@@ -172,10 +172,9 @@ footer{
 }
 
 /* HANDHELD CONTENT */
-@media (max-width: 768px){
+@media (max-width: 800px){
 
 	#background{
-		background-image: url('../images/backgrounds/1.jpg');
 		background-repeat: no-repeat;
 		background-position: 50% -50px;
 		background-size: auto 150%;
@@ -191,14 +190,16 @@ footer{
 
 	#tablet{
 		display: block;
-		margin: auto;
-		width: 85%;
+		margin: 2em auto;
+		width: 100%;
 		text-align: center;
 		text-shadow: 0 0 5px #333;
+		padding: 0.5em 0;
 	}
 
 	#tablet h1{
 		font-size: 2.5em;
+		line-height: 0.8em;
 	}
 
 	#tablet h1 .small{
@@ -228,18 +229,16 @@ footer{
 
 	footer{
 		clear: both;
-		margin-top: 60px;
+		margin: 3em auto 0 auto;
 		position: relative;
 		left: inherit;
-		margin-left: auto;
-		margin-right: auto;
 	}
 
 	#footer-content{
 		text-align: center;
-		padding-right: 0;
-		height: 4em;
 		left: inherit;
+		padding: 1em 0;
+		height: auto;
 	}
 
 	#footer-content span{
@@ -255,12 +254,5 @@ footer{
 
 	#footer-content{
 		font-size: 0.75em;
-	}
-}
-
-/* DISAPPEARING FOOTER */
-@media (max-height: 400px){
-	footer{
-		display: none;
 	}
 }
