@@ -12,10 +12,10 @@ $(function(){
 		
 		$('body').css('background-image', 'url(images/backgrounds/' + rand + '.jpg)');
 	}
-	changeBackground();
 
 	$('nav > ul > li[class!="ignore"] > a').click(function(event){
 		$(this).next('ul:first').slideToggle('fast');
+		changeBackground();
 		event.preventDefault();
 	});
 
