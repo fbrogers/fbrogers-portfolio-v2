@@ -18,7 +18,11 @@ a{
 	text-decoration: none;
 }
 
-#wrapper{
+.clear{
+	clear: both;
+}
+
+.wrapper{
 	min-height: 100%;
 	position: relative;
 	z-index: 10;
@@ -26,7 +30,7 @@ a{
 	margin: auto;
 }
 
-#background{
+.background{
 	background-color: #111;
 	background-image: url('../images/backgrounds/1.jpg');
 	background-repeat: no-repeat;
@@ -41,7 +45,7 @@ a{
 	z-index: 0;
 }
 
-#tablet{
+.tablet{
 	display: none;
 }
 
@@ -54,7 +58,7 @@ header{
 }
 
 header p{
-	margin: 0 0 0.5em 3em;
+	margin: 0 0 0.5em 0;
 }
 
 nav ul{
@@ -67,16 +71,21 @@ nav li{
 	margin: 0;
 }
 
-nav li a{
+nav li span.menu-item{
 	display: block;
 	padding: 0.2em 0 0.2em 1em;
 	font-size: 2em;	
 	color: #fff;
 	text-decoration: none;
+	cursor: pointer;
 }
 
-nav li a:hover{
+nav li span.menu-item:hover{
 	background-image: url('../images/opacity.png');
+}
+
+nav li span.menu-item.ignore{
+	cursor: default;
 }
 
 nav li ul{
@@ -85,7 +94,7 @@ nav li ul{
 	padding: 0 0 0.5em 0;
 }
 
-nav li li a{
+nav li li{
 	display: block;
 	padding: 0 0 0.2em 3em;
 	font-size: 1em;	
@@ -93,12 +102,8 @@ nav li li a{
 	text-decoration: none;
 }
 
-.ignore ul{
+.ignore + ul{
 	display: block;
-}
-
-.ignore a[href='#']{
-	cursor: default;
 }
 
 .semi{
@@ -106,7 +111,7 @@ nav li li a{
 	background-color: transparent;
 }
 
-#main{
+.main{
 	z-index: 10;
 	position: absolute;
 	top: 3em;
@@ -114,14 +119,14 @@ nav li li a{
 	padding: 0.5em 2em 1em 2em;
 }
 
-#main h1{
+.main h1{
 	margin: 0;
 	font-size: 4em;
 	position: relative;
 	padding-bottom: 0.2em;
 }
 
-#main h1 .small{
+.main h1 .small{
 	font-size: 0.333em;
 	position: absolute;
 	left: 0;
@@ -136,7 +141,7 @@ footer{
 	z-index: 10;
 }
 
-#footer-content{
+.footer-content{
 	position: relative;
 	left: -50%;
 	height: 2.5em;
@@ -150,17 +155,17 @@ footer{
 /* TABLET CONTENT */
 @media (max-width: 1024px){
 
-	#main{
+	.main{
 		right: 2em;
 	}
 
-	#main h1{
+	.main h1{
 		font-size: 2.75em;
 		position: relative;
 		padding-bottom: 0.2em;
 	}
 
-	#main h1 .small{
+	.main h1 .small{
 		font-size: 0.333em;
 		position: absolute;
 		left: 0;
@@ -171,7 +176,7 @@ footer{
 /* HANDHELD CONTENT */
 @media (max-width: 800px){
 
-	#background{
+	.background{
 		display: none;
 	}
 
@@ -182,15 +187,15 @@ footer{
 		padding: 2em;
 	}
 
-	#wrapper, footer{
+	.wrapper, footer{
 		width: 100%;
 	}
 
-	#main{
+	.main{
 		display: none;
 	}
 
-	#tablet{
+	.tablet{
 		display: block;
 		margin: 0 auto 2em;
 		width: 100%;
@@ -199,12 +204,12 @@ footer{
 		padding: 0.5em 0;
 	}
 
-	#tablet h1{
+	.tablet h1{
 		font-size: 3em;
 		line-height: 0.8em;
 	}
 
-	#tablet h1 .small{
+	.tablet h1 .small{
 		font-size: 0.6em;
 	}
 
@@ -236,33 +241,33 @@ footer{
 		left: inherit;
 	}
 
-	#footer-content{
+	.footer-content{
 		text-align: center;
 		left: inherit;
 		padding: 1em 0;
 		height: auto;
 	}
 
-	#footer-content span{
+	.footer-content span{
 		display: block;
 	}
 
-	#change-bg{
+	.change-bg{
 		font-size: 1.333em;
 	}
 
-	#footer-content span.nope{
+	.footer-content span.nope{
 		display: none;
 	}	
 }
 
 /* REALLY SMALL CONTENT */
 @media (max-width: 480px){
-	#tablet h1{
+	.tablet h1{
 		font-size: 2em;
 	}
 
-	#footer-content{
+	.footer-content{
 		font-size: 0.75em;
 	}
 }

@@ -12,7 +12,7 @@ $(function(){
 		rand = randoCalrissian(rand);
 
 		//animate the background change by fading out the old and fading in the new
-		$('#background').animate({ opacity: 0 }, 'fast', function(){
+		$('.background').animate({ opacity: 0 }, 'fast', function(){
 			$(this).css({
 				'background-image': 'url(images/backgrounds/' + rand + '.jpg)'
 			}).animate({ opacity: 1 });
@@ -20,18 +20,13 @@ $(function(){
 		$('body').css('background-image', 'url(images/backgrounds/' + rand + '.jpg)');
 	}
 
-	$('nav > ul > li[class!="ignore"] > a').click(function(event){
+	$('span.menu-item').not('.ignore').click(function(event){
 		$(this).next('ul:first').slideToggle('fast');
 		event.preventDefault();
 	});
 
-	$('#change-bg').click(function(event){
+	$('.change-bg').click(function(event){
 		changeBackground(rand);
-		event.preventDefault();
-	});
-
-	//prevent blanks from firing
-	$('.ignore a[href="#"]').click(function(){
 		event.preventDefault();
 	});
 	
