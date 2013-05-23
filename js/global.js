@@ -2,7 +2,8 @@ $(function(){
 	var rand = 1;
 
 	function randoCalrissian(current){
-		var rando = Math.floor(Math.random()*10)+1;
+		var max = 8;
+		var rando = Math.floor(Math.random()*max)+1;
 		if(current == rando) return randoCalrissian(current);
 		else return rando;
 	}
@@ -30,7 +31,6 @@ $(function(){
 		event.preventDefault();
 	});
 	
-	//preload bg images
 	if(document.images){
 		img1 = new Image();
 		img2 = new Image();
@@ -40,8 +40,6 @@ $(function(){
 		img6 = new Image();
 		img7 = new Image();
 		img8 = new Image();
-		img9 = new Image();
-		img10 = new Image();
 
 		img1.src = "images/backgrounds/1.jpg";
 		img2.src = "images/backgrounds/2.jpg";
@@ -51,7 +49,5 @@ $(function(){
 		img6.src = "images/backgrounds/6.jpg";
 		img7.src = "images/backgrounds/7.jpg";
 		img8.src = "images/backgrounds/8.jpg";
-		img9.src = "images/backgrounds/9.jpg";
-		img10.src = "images/backgrounds/10.jpg";
 	}
 });
