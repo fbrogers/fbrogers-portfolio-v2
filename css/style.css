@@ -225,7 +225,7 @@ footer{
 		margin-left: 0;
 	}
 
-	nav li a, nav li li a{
+	nav li span.menu-item, nav li li{
 		padding-left: 0;
 	}
 
