@@ -4,8 +4,7 @@ $(function(){
 	function randoCalrissian(current){
 		var max = 8;
 		var rando = Math.floor(Math.random()*max)+1;
-		if(current == rando) return randoCalrissian(current);
-		else return rando;
+		return current == rando ? randoCalrissian(current) : rando;
 	}
 
 	function changeBackground(){
@@ -13,12 +12,18 @@ $(function(){
 		rand = randoCalrissian(rand);
 
 		//animate the background change by fading out the old and fading in the new
-		$('.background').animate({ opacity: 0 }, 'fast', function(){
-			$(this).css({
-				'background-image': 'url(images/backgrounds/' + rand + '.jpg)'
-			}).animate({ opacity: 1 });
-		});		
-		$('body').css('background-image', 'url(images/backgrounds/' + rand + '.jpg)');
+		$('body').css('background-image', 'none');
+		$('.background').animate(
+			{ opacity: 0 }, 'fast',
+			function(){
+				$(this).css('background-image', 'url(images/backgrounds/' + rand + '.jpg)').animate(
+					{ opacity: 1 }, 'fast',
+					function(){
+						$('body').css('background-image', 'url(images/backgrounds/' + rand + '.jpg)');
+					}
+				);
+			}
+		);
 	}
 
 	$('span.menu-item').not('.ignore').click(function(event){
